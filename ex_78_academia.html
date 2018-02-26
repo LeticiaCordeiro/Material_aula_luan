@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+<style type="text/css">
+form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+</style>
+
+<script type="text/javascript">
+function calcular(valor) {
+   var valor1 = document.form.valor1.value;
+
+   if (valor == "tri") {
+      var res = parseInt(valor1) * 0.01;
+   } else {
+      if (valor == "sem") {
+         var res = parseInt(valor1) * 0.02;
+      } else {
+         if (valor == "anu") {
+            var res = parseInt(valor1) * 0.03;
+         } else {
+           
+         }
+      }
+   }
+
+   document.form.res.value = res;
+}
+</script>
+
+</head>
+<body>
+<form name="form" method="post" action="">
+   <fieldset>
+      <legend>descontos</legend>
+
+      <label for="valor1"> valor da academia:</label>
+      <input type="text" name="valor1" id="valor1" value="260"/>
+
+      <label for="valor">Selecione a operação:</label>
+      <select name="valor" id="valor">
+         <option value="tri">trimestral</option>
+         <option value="sem">Semestral</option>
+         <option value="anu">anual</option>
+      </select>
+
+      <label for="res">Resultado:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="Calcular" class="botao" onClick="calcular(document.form.valor.value)"/>
+   </fieldset>
+</form>
+</body>
+</html>

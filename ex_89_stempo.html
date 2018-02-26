@@ -1,0 +1,33 @@
+<html>
+ <head>
+ <script>
+ 
+      function calcular(){
+	  
+	             var vsom = document.velo.vsom.value;
+				 
+	             var dis = document.velo.dis.value;
+				 
+	             var res = dis / vsom;
+				 
+                   document.velo.res.value = res;	  
+	  
+	           }
+ 
+ </script>
+ </head>
+ 
+ <body>
+ 
+ <form id="velo" name="velo" method="post">
+ 
+ digite a velocidade do som <input type="text" value="344" name="vsom" id="vsom">
+ 
+ digite a  distancia <input type="text" value="3096" name="dis" id="dis">
+ 
+ resposta: <input type="text" name="res" id="res">
+  
+ <input type="button" value="Calcular" onClick="calcular()">
+ 
+ </body>
+ </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+<style type="text/css">
+form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+</style>
+
+<script type="text/javascript">
+function calcular() {
+
+   var homem1 = document.form.homem1.value;
+   var homem2 = document.form.homem2.value;
+   var mulher1 = document.form.mulher1.value;
+   var mulher2 = document.form.mulher2.value;
+   var valor1 = 0;
+   var valor2 = 0;
+   var res = 0;
+   
+   if(homem1 > homem2){
+		valor1 = homem1;
+   } 
+   else {
+       valor1 = homem2;
+   }
+   if (mulher1 < mulher2){
+		valor2 = mulher1;
+   }
+   else {
+		valor2 = mulher2;
+   }
+   
+   res = parseInt(valor1) + parseInt(valor2) ;
+   
+  document.form.res.value = res;
+}
+</script>
+
+</head>
+<body>
+<form name="form" method="post" action="">
+   <fieldset>
+
+      <label for="homem2">Digite a idade do 1 homem:</label>
+      <input type="text" name="homem1" id="homem1" />
+	  
+	   <label for="homem2">Digite a idade do 2 homem:</label>
+      <input type="text" name="homem2" id="homem2" />
+	  
+	   <label for="mulher1">Digite a idade da 1 mulher:</label>
+      <input type="text" name="mulher1" id="mulher1" />
+	  
+	   <label for="mulher2">Digite a idade da 2 mulher:</label>
+      <input type="text" name="mulher2" id="mulher2" />
+
+	  <label for="res"> Soma das idades do homem mais velho com a mulher mais nova:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="Calcular" class="botao" onClick="calcular()"/>
+   </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+A marca <INPUT> com o atributo type="hidden" permite definir dados que são passados a um programa CGI mas não aparecem ao utilizador do formulário. Este campo serve para memorizar valores durante um diálogo com o utilizador. 
+Por exemplo, um site que permita encomendar produtos pode apresentar ao utilizador vários formulários, listando os diferentes produtos que podem ser encomendados, e no último formulário apresenta uma lista com todos os produtos que o utilizador seleccionou.

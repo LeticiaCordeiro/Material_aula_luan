@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+#divfotona{
+height:300px;
+width:400px;
+
+}
+#fotinha{
+height:100px;
+width:400px;
+}
+#corpo{
+margin-left:auto;
+margin-right:auto;
+position:relative;
+border-style: solid;
+border-color: #ff0000;
+height:400px;
+width:400px;
+}
+</style>
+<script>
+function muda(foto){
+	//document.getElementById("divfotona").src = "img"+foto+".jpg"
+		document.getElementById("divfotona").innerHTML = "<img src='img"+foto+".jpg' height='300px' width='400px' id='fotona'/>"
+		
+}	
+
+</script>
+</head>
+<body>
+<div id="corpo">
+	<div id="divfotona">
+ 
+	</div>
+	<div id="fotinha">
+		<img src="img3.jpg" height="100px" width="130px" alt="Imagem3" id="img3" onmouseover="muda(3)" onmouseout="muda(0)"/>
+		<img src="img1.jpg" height="100px" width="130px" alt="Imagem1" id="img1" onmouseover="muda(1)" onmouseout="muda(0)"/>
+		<img src="img2.jpg" height="100px" width="130px"alt="Imagem2" id="img2"  onmouseover="muda(2)" onmouseout="muda(0)"/>
+	</div>
+</div>
+</body>
+</html>

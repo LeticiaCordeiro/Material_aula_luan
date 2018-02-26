@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+<style type="text/css">
+form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+</style>
+
+<script type="text/javascript">
+function calcular() {
+
+   var valor = document.pao.valor.value;
+   
+	for(i=1;i<=50;i++){
+		var res ;
+		res = (i * valor);
+		
+		document.getElementById("res").innerHTML += i+"-"+res+" ";
+		document.getElementById("res").innerHTML += "<br>";
+	
+	}
+  
+}
+</script>
+
+</head>
+<body>
+<form name="pao" method="post" action="">
+   <fieldset>
+
+      <label for="estado">Digite o valor do pão:</label>
+      <input type="text" name="valor" id="valor" />
+
+     <div id="res">
+	 
+	 </div>
+
+      <input type="button" value="Calcular" class="botao" onClick="calcular()"/>
+   </fieldset>
+</form>
+</body>
+</html>

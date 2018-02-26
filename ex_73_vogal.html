@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+<style type="text/css">
+form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+</style>
+
+<script type="text/javascript">
+function calcular() {
+
+   var letra = document.vogal.letra.value;
+   
+   
+   if (letra == "a" || letra == "A")
+   {
+		 window.alert("é vogal");
+		 document.vogal.letra.focus();
+   }
+   else if (letra == "e" || letra == "E")
+   {
+		 window.alert("é vogal");
+		 document.vogal.letra.focus();
+   }
+   else if (letra == "i" || letra == "I")
+   {
+		 window.alert("é vogal");
+		 document.vogal.letra.focus();
+   }
+   else if (letra == "o" || letra == "O")
+   {
+		 window.alert("é vogal");
+		 document.vogal.letra.focus();
+   }
+   else if (letra == "u" || letra == "U")
+   {
+		 window.alert("é vogal");
+		 document.vogal.letra.focus();
+   }
+   else 
+   {
+		 window.alert("não é vogal");
+		 document.vogal.letra.focus();
+   }
+     
+}
+</script>
+
+</head>
+<body>
+<form name="vogal" method="post" action="">
+   <fieldset>
+      <legend>letra</legend>
+
+      <label for="letra">Digite uma letra:</label>
+      <input type="text" name="letra" id="letra"/>
+	  
+      <input type="button" value="Calcular" class="botao" onClick="calcular()"/>
+   </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+<head>
+<script>
+
+
+function calcular() {
+  var assinaturas = document.telefonica.assinaturas.value;
+  var pulsos = document.telefonica.pulsos.value;
+  var despertador = document.telefonica.despertador.value;
+  
+  if(assinaturas=="")
+  {
+                window.alert("Campo nao preenchido");
+				document.frete.estado.focus();
+				
+  }
+  
+  if(pulsos =="")
+  {
+ 
+                window.alert("Campo nao preenchido");
+				document.frete.km.focus();
+  }
+  if(despertador=="")
+  {
+ 
+                window.alert("Campo nao preenchido");
+				document.frete.km.focus();
+  }
+  
+  
+  if (assinaturas ==1) {
+  
+  var vassinatura = 20;
+  
+  
+  }
+  
+  else {
+  
+  var vassinatura = 50;
+  
+  
+  }
+  
+  
+  if (pulsos == 100) {
+	  pulsos = 0;
+	  var vpulsos = pulsos * 0.09;
+  
+  }
+  else if(pulos > 100){
+	 pulsos = pulsos - 100;
+	 var vpulsos = pulsos * 0.09;
+  }
+  else 
+  {
+	pulsos = 0;
+  }
+ 
+ var vdespertador = despertador * 5;
+ 
+ 
+ var ress = vassinatura + vpulsos + vdespertador;
+ 
+ 
+
+ document.telefonica.tarifa.value=ress;
+ 
+ 
+}
+</script>
+<style>
+ div{
+    border: 1px double black;
+	height:300px;
+     width:400px;
+	 background-color:#f2f2f2;
+ }
+  </style>
+ </head>
+ <body> 
+		  
+        <form name="telefonica"   method="post">
+				<div >
+		         <center> <h1>telefonica</h1></center>
+		              <label for="assinaturaso"> Digite o codigo:</label>
+		                <input type="text" id="assinaturas" name="assinaturas"/>
+					<br>
+		              <label for="pulsos"> Digite a quantidade de pulsos para chamadas locais:</label>
+		                <input type="text" id="pulsos" name="pulsos"/>
+						<br>
+						<label for="despertador">Quantidade de vezes que o serviço despertador foi ultilizado</label>
+		                <input type="text" id="depertador" name="despertador"/>
+						 <br>
+						 <label for="tarifa">Total da conta do assinante</label>
+		                <input type="text" id="tarifa" name="tarifa"/>
+						<br>
+						<input type="button" value="calcular" onClick="calcular()"/>
+						
+				</div>	
+				
+       </form>
+	   
+     
+
+ 
+ 
+ </body>
+ </html>

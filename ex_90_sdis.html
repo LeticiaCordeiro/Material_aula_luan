@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<script>
+    
+	function  calcular(){
+	
+	            var vsom = document.getElementById("vsom").value;
+				
+				var temp = document.getElementById("temp").value;
+				
+				var res = vsom * temp;
+	
+	              document.dis.res.value = res;
+	        
+	          }
+			  
+</script>
+</head>
+
+<body>
+
+          <form id="dis" name="dis" method="post">
+		  
+    digite o valor da velocidade do som <input type="text" value="344" id="vsom" name="vsom">
+	
+	digite o valor do tempo apos a trovoada <input type="text" value="15" id="temp" name="temp">
+	
+	valor distancia <input type="text" id="res" name="res">
+	
+	<input type="button" value="calcular"  onClick="calcular()">
+	
+</form>
+</body>
+</html>

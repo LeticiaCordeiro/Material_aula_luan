@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function mudaImagem() {    
+
+var temp = document.getElementById("img1").src;
+
+document.getElementById("img1").src = document.getElementById("img2").src;
+
+document.getElementById("img2").src = temp;
+}
+</script>
+</head>
+<body>
+
+<center>
+<br>
+<br>
+<div id="imagem1">
+	<img src="img1.jpg" height="200px" width="250px" alt="Imagem1" id="img1" /> 
+</div>
+<div id="imagem2">
+	<img src="img2.jpg" height="200px" width="250px" alt="Imagem2" id="img2" />
+</div>
+<br>
+<br>
+<br>
+<button type="button" class="btn btn-default" onclick="mudaImagem()">mudar</button>
+</center>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+<style type="text/css">
+form fieldset {
+   margin: 10px auto 10px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+}
+
+form legend {
+   padding: 6px;
+   margin: 10px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+form label {
+   display: block;
+   font-size: 11px;
+}
+
+form input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 11px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+</style>
+
+<script type="text/javascript">
+function somar() {
+   var valor1 = document.calcform.valor1.value;
+   var valor2 = document.calcform.valor2.value;
+
+   var res = parseInt(valor1) + parseInt(valor2);
+   
+    document.calcform.res.value = res;
+}
+function subitrair(){
+     
+	var valor1 = document.calcform.valor1.value;
+    var valor2 = document.calcform.valor2.value;
+         
+		 var res = valor1-valor2;
+
+	document.calcform.res.value = res;	 
+		 
+}
+function multiplicar(){
+
+	var valor1 = document.calcform.valor1.value;
+    var valor2 = document.calcform.valor2.value;
+         
+		  var res = valor1*valor2;
+
+	document.calcform.res.value = res;	
+}		 
+function dividir(){		 
+    
+    var valor1 = document.calcform.valor1.value;
+    var valor2 = document.calcform.valor2.value;	
+           
+		   var res = valor1/valor2;
+
+     document.calcform.res.value = res;
+}
+</script>
+
+</head>
+<body>
+<form name="calcform" method="post" action="">
+   <fieldset>
+      <legend>Calculadora Simples</legend>
+
+      <label for="valor1">Digite o valor <strong>1</strong>:</label>
+      <input type="text" name="valor1" id="valor1" />
+
+      <label for="valor2">Digite o valor <strong>2</strong>:</label>
+      <input type="text" name="valor2" id="valor2" />
+
+      <label for="res">Resultado:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="somar" class="botao" onClick="somar()"/>
+	  <input type="button" value="subitrair" class="botao" onClick="subitrair()"/>
+	  <input type="button" value="dividir" class="botao" onClick="dividir()"/>
+	  <input type="button" value="multiplicar" class="botao" onClick="multiplicar()"/>
+   </fieldset>
+</form>
+</body>
+</html>

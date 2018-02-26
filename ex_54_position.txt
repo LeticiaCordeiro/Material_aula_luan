@@ -1,0 +1,24 @@
+Qual é a diferença entre o position:relative e  position:absolute? 
+ 
+Isso confunde muita gente porque a propriedade position define duas coisas: como o elemento se comporta em relação aos seus ancestrais na hierarquia, e como seus descendentes poderão se comportar em relação a ele.
+
+Os princípios são:
+
+Tanto position: relative quanto position: absolute determinam contextos de posicionamento para os descendentes do elemento.
+Elementos com position: absolute são posicionados em relação ao contexto de posicionamento mais próximo. Por exemplo:
+
+<div style="position: relative">
+    <div>
+        <div style="position: absolute"></div>
+    </div>
+</div>
+A terceira <div> pode ser posicionada com top e left em relação à mais externa. Se nenhum contexto de posicionamento for encontrado subindo a hierarquia, o elemento seria posicionado em relação ao <body>.
+Elementos com position: absolute não ocupam espaço em nenhum dos ascendentes até o contexto de posicionamento. Considerando o exemplo acima, é como se a div de dentro não existisse, tanto para a do meio, quanto para a de fora. Ela não ocupa espaço dentro das outras, não influi em sua altura ou largura. Diz-se que ela é removida do fluxo de renderização do documento.
+Elementos com position: relative ocupam espaço em seus ascendentes. Eles podem ser deslocados de sua posição esperada com top e left, mas esse deslocamento não influi em outros elementos no mesmo nível da hierarquia ou acima. Para os outros, é como se ele sempre estivesse sempre na posição esperada. Mas visualmente ele pode estar deslocado. Por exemplo:
+
+<div style="position: relative">
+    <div style="height: 100px; background: red; position: relative; top: 50px"></div>
+    <div style="height: 100px; background: blue"></div>
+</div>
+A div vermelha está a 50px do topo do contêiner, e sobre a metade superior da div azul. Ou seja, foi deslocada 50px de sua posição esperada, mas isso não moveu a div azul de lugar, ela continua "achando" que a vermelha está onde deveria. Por isso é que se diz que os elementos com position: relative são posicionados "em relação a si mesmos"; a referência para o deslocamento é sempre o próprio elemento (e não o contêiner), e para os demais elementos é como se ele não tivesse sido deslocado.
+Com esses princípios, faça experimentos sobre como os elementos se comportam. Se você não quer que um elemento saia de sua posição "natural", não coloque position: absolute nele. Mas pode ser útil usar position: relative para que os elementos dentro dele se posicionem em relação a ele.

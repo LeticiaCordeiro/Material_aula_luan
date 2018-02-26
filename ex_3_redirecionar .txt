@@ -1,0 +1,5 @@
+<meta http-equiv="refresh" content="TEMPOEM_SEGUNDOS; http://site_para_onde_a_pagina_vai">
+
+<script language= "JavaScript">
+location.href="http://www.site_a_ser_redirecionado.com"
+</script>

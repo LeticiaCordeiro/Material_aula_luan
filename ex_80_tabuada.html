@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function calcular() {
+   var valor1 = document.getElementById("valor1").value;
+   for(i=1;i<=10;i++){
+		
+		/*document.write(i+"x"+valor1+":");
+		document.write(i * valor1);
+		document.write("<br>");	*/
+		var res ;
+		res = (1* valor1);
+		
+		document.getElementById("tabuada").innerHTML += i+"x"+valor1+":";
+		document.getElementById("tabuada").innerHTML += 1* valor1;
+		document.getElementById("tabuada").innerHTML += "<br>";
+   }
+  
+}
+</script>
+
+</head>
+<body>
+
+      <label for="valor1"> Digite um numero:</label>
+      <input type="text" name="valor1" id="valor1" />
+    <button type="button" class="btn btn-default" onclick="calcular()">calcular</button>
+	  <div id="tabuada">
+	 
+	  <div>
+
+</body>
+</html>
